@@ -1,17 +1,34 @@
 <template>
   <div class="user">
-    <div class="id">{{ user.id }}</div>
-    <div class="logo"></div>
-    <div class="name">{{ user.name}}</div>
-    <div class="surname">{{ user.secondName}}</div>
-    <div class="rating">{{ user.rating }}</div>
+    <div class="id">
+      {{ user.id }}
+    </div>
+    <div class="logo">
+      {{ user.name[0] }}
+      {{ user.secondName[0] }}
+    </div>
+    <div class="name">
+      {{ user.name }}
+      {{ user.secondName }}
+    </div>
+    <div class="age">
+      {{ user.age }}
+    </div>
+    <div class="rating">
+      {{ user.rating }}
+    </div>
   </div>
 </template>
 
 
 <script>
 export default {
-  props: ["user"]
+  props: {
+    user: {
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -20,17 +37,35 @@ export default {
 .user {
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .user > div {
   margin-right: 10px;
-  margin-top: 10px;
 }
 
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background: lightgreen;
   border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.age,
+.rating {
+  flex: 1;
+  text-align: center;
+}
+
+.name {
+  flex: 5;
+}
+
+.name {
+  font-weight: bold;
 }
 </style>

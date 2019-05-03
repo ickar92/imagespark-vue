@@ -8,14 +8,17 @@ export default new Vuex.Store({
   state: {
     users: [],
   },
+
   getters: {
     users: state => state.users,
   },
+
   mutations: {
     fetchUsers: (state, users) => {
       state.users = users;
     },
   },
+
   actions: {
     fetchUsers: ({ commit }) => {
       http.get('users')

@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <UsersList />
+    <div class="container">
+      <UsersList />
+    </div>
   </div>
 </template>
 
 <script>
-import UsersList from "@/components/UsersList.vue";
+import UsersList from '@/components/UsersList.vue';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    UsersList
-  }
+    UsersList,
+  },
 };
 </script>
 
@@ -24,5 +26,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+.container {
+  max-width: 600px;
+  width: 100%;
+  // padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
