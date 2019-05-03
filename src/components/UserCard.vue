@@ -1,5 +1,5 @@
 <template>
-  <div class="user">
+  <div class="user-card">
     <div class="id">
       {{ user.id }}
     </div>
@@ -20,7 +20,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
   props: {
@@ -32,15 +31,14 @@ export default {
 };
 </script>
 
-
 <style scoped lang="scss">
-.user {
+.user-card {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-.user > div {
+.user-card > div {
   margin-right: 10px;
 }
 

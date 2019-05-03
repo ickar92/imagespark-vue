@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <div class="container">
-      <UsersList />
+      <UsersContainer />
     </div>
   </div>
 </template>
 
 <script>
-import UsersList from '@/components/UsersList.vue';
+import UsersContainer from '@/components/UsersContainer.vue';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    UsersList,
+    UsersContainer,
   },
 };
 </script>
@@ -20,17 +20,20 @@ export default {
 <style lang="scss">
 body {
   margin: 0;
+  overflow-y: scroll;
 }
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
 .container {
   max-width: 600px;
   width: 100%;
-  // padding: 20px;
+  padding: 20px;
   margin-left: auto;
   margin-right: auto;
 }
